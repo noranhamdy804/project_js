@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Shipped</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .navbar {
+      height: 30px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar div {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    .logo {
+      text-shadow: 0px 0px 2px rgb(190, 33, 54);
+      color: blueviolet;
+      margin-right: auto;
+      font-size: larger;
+    }
+
+    .navbar div a {
+      text-decoration: none;
+      color: blueviolet;
+      transition: 1s;
+    }
+
+    .navbar div a:hover {
+      transform: scale(1.2);
+      color: blue;
+    }
+
+    #bagIcon {
+      padding-left: 6px;
+      font-size: 20px;
+      color: blueviolet;
+      background: none;
+      transition: 1s;
+    }
+
+    #bag {
+      background-color: #8ebff4;
+      border-radius: 3px;
+    }
+
+    #Dark {
+      font-size: 15px;
+      color: blueviolet;
+      background: none;
+      border: none;
+    }
+
+    #Dark:hover,
+    #bagIcon:hover {
+      transform: scale(1.2);
+      color: #007bff;
+    }
+
+    @media(max-width:570px) {
+      .navbar {
+        flex-direction: column;
+      }
+    }
+
+
+    body {
+      padding-top: 40px;
+    }
+
+    .message {
+      
+      display: flex;
+      text-align: center;
+      display: inline-block;
+    }
+
+    img {
+      width: 300px;
+      height: auto;
+      padding-top: 30px;
+    }
+
+    .message h3 {
+      color: #521e83;
+      font-size: 30px;
+    }
+
+    .message p {
+      color: #521e83;
+      font-size: 30px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    .footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: auto;
+}
+
+
+
+.footer-section {
+  flex: 1;
+  margin: 15px;
+  min-width: 200px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #f2f2f2;
+}
+
+.footer-section p {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section ul li i {
+  margin-right: 8px;
+  color: #ff6f61;
+}
+
+.footer-section ul li i:hover {
+  transform: scale(2px, 2px);
+  color: #a29fb1;
+
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.newsletter button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #e55d4d;
+}
+
+.social-icons a {
+  color: #ff6f61;
+  margin: 0 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: transform 2s;
+
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  font-size: 1.4em;
+  transform-origin: 0px 0px;
+  transform: scale(10px, 3px);
+}
+
+.footer-bottom p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+  </style>
+</head>
+
+<body>
+  <header class="col-12">
+
+    <div class="col-1"></div>
+    <div class="navbar col-10" style="margin-left: 8.33%;">
+
+
+      <div class="logo">Giftos</div>
+      <div>
+        <a href="#home" class="active">HOME</a>
+      </div>
+      <div>
+        <a href="#shop">SHOP</a>
+      </div>
+      <div>
+        <a href="#whyUs">WHY US</a>
+      </div>
+      <div>
+        <a href="#contactUs">CONTACT US</a>
+      </div>
+      <div>
+        <a id="signIn" href="./createAccount.html">Sign in</a>
+        <span id="span1"></span>
+
+        
+      </div>
+      <div>
+        <span id="bag"></span><span id="bagIcon"><i class="fa-solid fa-bag-shopping"
+            onclick="directToCards(this)"></i></span>
+      </div>
+      <div>
+        <button id="Dark"><i class="fa-regular fa-sun"></i></button>
+      </div>
+
+    </div>
+
+    <div class="col-1"></div>
+  </header>
+  <div class="message">
+    <img src="./image/ordershipped.jpg" alt="ordershipped">
+    <h3>Order Shipped Successfully!</h3>
+    <p>Thank you for your purchase. Your order is on its way</p>
+  </div>
+  <div class="row col-11 footer">
+    <div class="footer-section about">
+      <h2>ABOUT US</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed doLorem ipsum dolor sit amet.
+      </p>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+
+    <div class="footer-section need-help">
+      <h2>NEED HELP</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed doLorem ipsum dolor sit amet.
+      </p>
+    </div>
+
+    <div class="footer-section contact-us">
+      <h2>CONTACT US</h2>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Gb road 123 London UK</li>
+        <li><i class="fas fa-phone"></i> +01 12345678901</li>
+        <li><i class="fas fa-envelope"></i> demo@gmail.com</li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="social-icons ">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div>
+      <p>&copy; 2024 All Rights Reserved By Free Html Templates</p>
+    </div>
+  </div>
+</body>
+
+</html>

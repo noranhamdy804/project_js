@@ -1,0 +1,381 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  .navbar {
+    height: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar div {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .logo {
+    text-shadow: 0px 0px 2px rgb(190, 33, 54);
+    color: blueviolet;
+    margin-right: auto;
+    font-size: larger;
+  }
+  
+  .navbar div a {
+    text-decoration: none;
+    color: blueviolet;
+    transition: 1s;
+  }
+  
+  .navbar div a:hover {
+    transform: scale(1.2);
+    color: blue;
+  }
+  
+  #bagIcon {
+    padding-left: 6px;
+    font-size: 20px;
+    color: blueviolet;
+    background: none;
+    transition: 1s;
+  }
+  
+  #bag {
+    background-color: #8ebff4;
+    border-radius: 3px;
+  }
+  
+  #Dark {
+    font-size: 15px;
+    color: blueviolet;
+    background: none;
+    border: none;
+  }
+  
+  #Dark:hover,
+  #bagIcon:hover {
+    transform: scale(1.2);
+    color: #007bff;
+  }
+  
+  @media(max-width:570px) {
+    .navbar {
+      flex-direction: column;
+    }
+  }
+  
+  
+  body {
+    padding-top: 40px; 
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Cart container styling */
+  #cartItems {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Product image styling */
+  .cart-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  /* Product info styling */
+  .cart-item > div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item p {
+    margin: 0;
+  }
+  
+  .cart-item strong {
+    font-size: 16px;
+  }
+  
+  /* Quantity controls */
+  .quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .control-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .quantity-control span {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Remove button */
+  .remove {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .remove:hover {
+    background-color: #e53935;
+  }
+  
+  /* Total amount styling */
+  #totalAmount {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Buy Now button */
+  #buyNow {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #673ab7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #buyNow:hover {
+    background-color: #5e35b1;
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 600px) {
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item > div {
+      margin-bottom: 10px;
+    }
+  
+    .quantity-control {
+      margin-bottom: 10px;
+    }
+  }
+  /* التأكد أن الجسم يملأ كامل الصفحة */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* لملء الصفحة بالكامل */
+  margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+/* حاوية المحتوى الرئيسي */
+.main-content {
+  flex-grow: 1; /* لتمدد المساحة بين الـ header و footer */
+  padding: 20px; /* إضافة حواف للمحتوى */
+}
+
+/* الـ footer كما هو مع التعديل لإبقائه في الأسفل */
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: auto;
+}
+
+
+
+.footer-section {
+  flex: 1;
+  margin: 15px;
+  min-width: 200px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #f2f2f2;
+}
+
+.footer-section p {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section ul li i {
+  margin-right: 8px;
+  color: #ff6f61;
+}
+
+.footer-section ul li i:hover {
+  transform: scale(2px, 2px);
+  color: #a29fb1;
+
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.newsletter button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #e55d4d;
+}
+
+.social-icons a {
+  color: #ff6f61;
+  margin: 0 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: transform 2s;
+
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  font-size: 1.4em;
+  transform-origin: 0px 0px;
+  transform: scale(10px, 3px);
+}
+
+.footer-bottom p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="myPage">
+
+    <header class="col-12">
+
+        <div class="col-1"></div>
+        <div class="navbar col-10" style="margin-left: 8.33%;">
+
+
+            <div class="logo">Giftos</div>
+            <div>
+                <a href="#home" class="active">HOME</a>
+            </div>
+            <div>
+                <a href="#shop">SHOP</a>
+            </div>
+            <div>
+                <a href="#whyUs">WHY US</a>
+            </div>
+            <div>
+                <a href="#contactUs">CONTACT US</a>
+            </div>
+            <div>
+                <a id="signIn" href="./createAccount.html">Sign in</a>
+                <span id="span1"></span>
+
+                <a id="logOut">/sign out</a>
+            </div>
+            <div>
+                <span id="bag"></span><span id="bagIcon"><i class="fa-solid fa-bag-shopping"
+                        onclick="directToCards(this)"></i></span>
+            </div>
+            <div>
+                <button id="Dark"><i class="fa-regular fa-sun"></i></button>
+            </div>
+
+        </div>
+
+        <div class="col-1"></div>
+    </header>
+    <div class="row col-12">
+        <div class="col-1"></div>
+        <div class="mySlides col-10" style="margin-left: 8.33%;">
+
+            <div class="section2">
+
+                <h2>welcome to our Gift Shop</h2>
+
+                <p>
+                    Step into our delightful gift shop, where every item tells a <br />
+                    story and sparks joy! From charming keepsakes to unique treasures,
+                    <br />
+                    we offer a curated selection perfect for celebrating special moments
+                    or <br />
+                    just brightening your day. Explore our wide range of thoughtful
+                    gifts,<br />
+                    and let us help you find the perfect present for your loved ones<br />
+                    or a little treat for yourself!
+                </p>
+                <a href="#contactUs" class="contact">CONTACT US</a>
+            </div>
+            <img src="./image/shopping1.jpg" alt="shopping" style="width: 100%; height: 100%" />
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row col-12">
+        <div class="col-1"></div>
+        <div class="mySlides col-10" style="margin-left: 8.33%;">
+
+            <div class="section2">
+
+                <h2>welcome to our Gift Shop</h2>
+
+                <p>
+                    Step into our delightful gift shop, where every item tells a <br />
+                    story and sparks joy! From charming keepsakes to unique treasures,
+                    <br />
+                    we offer a curated selection perfect for celebrating special moments
+                    or <br />
+                    just brightening your day. Explore our wide range of thoughtful
+                    gifts,<br />
+                    and let us help you find the perfect present for your loved ones<br />
+                    or a little treat for yourself!
+                </p>
+                <a href="#contactUs" class="contact">CONTACT US</a>
+            </div>
+            <img src="./image/shoping4.jpg" alt="shopping" style="width: 100%; height: 100%" />
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row col-12">
+        <div class="col-1"></div>
+        <div class="mySlides col-10" style="margin-left: 8.33%;">
+
+            <div class="section2">
+
+                <h2>welcome to our Gift Shop</h2>
+
+                <p>
+                    Step into our delightful gift shop, where every item tells a <br />
+                    story and sparks joy! From charming keepsakes to unique treasures,
+                    <br />
+                    we offer a curated selection perfect for celebrating special moments
+                    or <br />
+                    just brightening your day. Explore our wide range of thoughtful
+                    gifts,<br />
+                    and let us help you find the perfect present for your loved ones<br />
+                    or a little treat for yourself!
+                </p>
+                <a href="#contactUs" class="contact">CONTACT US</a>
+            </div>
+            <img src="./image/shoping7.jpg" alt="shopping" style="width: 100%; height: 100%" />
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+    <h4 id="shop">Product</h4>
+
+    <div class="row col-12">
+        <div class="col-1"></div>
+        <div class="btn-block col-10 " style="margin-left: 8.33%;">
+            <div> <button id="all" class="btn" onclick="showProducts('all')">
+
+                </button></div>
+            <div> <button id="flower" class="btn" onclick="showProducts('flowers')">
+
+                </button></div>
+            <div> <button id="electros" class="btn" onclick="showProducts('electro')"></button></div>
+
+            <div><button id="bear" class="btn" onclick="showProducts('bears')"></button></div>
+            <div><button id="Clothe" class="btn" onclick="showProducts('Clothes')"></button></div>
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div id="allProducts" class="pro row show col-12">
+        <h4>View All Products</h4>
+        <div class="col-1"></div>
+        <div class="products col-10" style="margin-left: 8.33%;">
+            <div class="items ">
+                <img src="./image/airpods1.jpg" style="width: 120px; height: 100px;" alt="AirPods" />
+                <p class="p1">AirPods:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/camera3.jpg" style="width: 120px; height: 100px;" alt="Wight-Camera" />
+                <p class="p1">Wight-Camera
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus" onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+
+            <div class="items ">
+                <img src="./image/camera.jpg" style="width: 120px; height: 100px;" alt="Black-Camera" />
+                <p class="p1">Black-Camera
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus" onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/e2.jpg" style="width: 120px; height: 100px;" alt="Smart Watch" />
+                <p class="p1">Smart Watch:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                    onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes1.jpg" style="width: 120px; height: 100px;" alt="Los Angeles Hoodie" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/flowers1.jpg" style="width: 120px; height: 100px;" alt="Red-flowers" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes5.jpg" style="width: 120px; height: 100px;" alt="Cloud Blue Outfit" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+
+            <div class="items ">
+                <img src="./image/bear11.jpg" style="width: 120px; height: 100px;" alt="Twin Bears" />
+                <p class="p1">Twin Bears
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/bears10.jpg" style="width: 120px; height: 100px;" alt="Pink Heart Bear" />
+                <p class="p1">Pink Heart Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/watch.jpg" style="width: 120px; height: 100px;" alt="Men-Watch" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/sumsung17.jpg" style="width: 120px; height: 100px;" alt="SumSung" />
+                <p class="p1">SumSung
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/watchMen2.jpg" style="width: 120px; height: 100px;" alt="Digital Watch" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes3.jpg" style="width: 120px; height: 100px;" alt="White Teddy Jacket" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes6.jpg" style="width: 120px; height: 100px;" alt="Summer Blue Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes7.jpg" style="width: 120px; height: 100px;" alt="Dream Girls Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div id="flowers" class="pro row col-12">
+        <h4> flowers</h4>
+        <div class="col-1"></div>
+        <div class="products col-10" style="margin-left: 8.33%;">
+            <div id="productSales" class="col-10">
+                <div class="items ">
+                    <img src="./image/Daisies.jpg" style="width: 120px; height: 100px;" alt="Daisies" />
+                    <p class="p1">Daisies
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/0.jpg" style="width: 120px; height: 100px;" alt="Lilies" />
+                    <p class="p1">Lilies
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/6.jpg" style="width: 120px; height: 100px;" alt="Peonies" />
+                    <p class="p1">Peonies
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/flower5.jpg" style="width: 120px; height: 100px;" alt="Sunflowers" />
+                    <p class="p1">name:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/flower6.jpg" style="width: 120px; height: 100px;" alt="Lavender" />
+                    <p class="p1">name:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/flowers1.jpg" style="width: 120px; height: 100px;" alt="Red-flowers" />
+                    <p class="p1">name:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div id="electro" class="pro row col-12">
+        <h4> electro</h4>
+        <div class="col-1"></div>
+        <div class="products col-10" style="margin-left: 8.33%;">
+            <div class="col-1"></div>
+            <div class="col-3 right-left">
+                <div class="items ">
+                    <img src="./image/e2.jpg" style="width: 120px; height: 100px;" alt="Smart Watch" />
+                    <p class="p1">Smart Watch:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/airpods1.jpg" style="width: 120px; height: 100px;" alt="AirPods" />
+                    <p class="p1">AirPods:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+            </div>
+
+            <div class="items col-4">
+                <img src="./image/iphone16.jpg" style="width: 120px; height: 100px;" alt="iPhone 16" />
+                <p class="p1">iPhone 16
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="col-3 right-left">
+                <div class="items ">
+                    <img src="./image/camera5.jpg" style="width: 120px; height: 100px;" alt="Camera" />
+                    <p class="p1">Camera:
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+                <div class="items ">
+                    <img src="./image/headphones5.jpg" style="width: 120px; height: 100px;" alt="Headphones" />
+                    <p class="p1">Headphones
+                        <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                    </p>
+                    <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"
+                        onclick="addToCart(this)"></i>
+                    </p>
+                    <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div id="bears" class="pro row col-12">
+        <h4>bears</h4>
+        <div class="col-1"></div>
+        <div class="products col-10" style="margin-left: 8.33%;">
+            <div class="items ">
+                <img src="./image/bear9.jpg" style="width: 120px; height: 100px;" alt="Blue and Pink Bear" />
+                <p class="p1">Blue and Pink Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/bear11.jpg" style="width: 120px; height: 100px;" alt="Twin Bears" />
+                <p class="p1">Twin Bears
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/bears10.jpg" style="width: 120px; height: 100px;" alt="Pink Heart Bear" />
+                <p class="p1">Pink Heart Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/bears7.jpg" style="width: 120px; height: 100px;" alt="Cute Pink Bear" />
+                <p class="p1">Cute Pink Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/bears8.jpg" style="width: 120px; height: 100px;" alt="White Bunny" />
+                <p class="p1">White Bunny
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/bears7.jpg" style="width: 120px; height: 100px;" alt="Smiling Pink Bear" />
+                <p class="p1">Smiling Pink Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/bears6.jpg" style="width: 120px; height: 100px;" alt="Grey Bunny" />
+                <p class="p1">Grey Bunny
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/bears4.jpg" style="width: 120px; height: 100px;" alt="Baby Girl Bear" />
+                <p class="p1">Baby Girl Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/bears2.jpg" style="width: 120px; height: 100px;" alt="Pink Sitting Bear" />
+                <p class="p1">Pink Sitting Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/bears1.jpg" style="width: 120px; height: 100px;" alt="White Bow Bear" />
+                <p class="p1">White Bow Bear
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div id="Clothes" class="pro row col-12">
+        <h4>Clothes</h4>
+        <div class="col-1"></div>
+        <div class="products col-10" style="margin-left: 8.33%;">
+            <div class="items ">
+                <img src="./image/clothes1.jpg" style="width: 120px; height: 100px;" alt="Los Angeles Hoodie" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes2.jpg" style="width: 120px; height: 100px;" alt="Beige Puffer Jacket" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+
+            <div class="items ">
+                <img src="./image/clothes3.jpg" style="width: 120px; height: 100px;" alt="White Teddy Jacket" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes4.jpg" style="width: 120px; height: 100px;" alt="Beige and Black Sweater" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes6.jpg" style="width: 120px; height: 100px;" alt="Summer Blue Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes7.jpg" style="width: 120px; height: 100px;" alt="Dream Girls Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes8.jpg" style="width: 120px; height: 100px;" alt="Blue and White Shirts Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes10.jpg" style="width: 120px; height: 100px;" alt="White and Beige Shoes" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes11.jpg" style="width: 120px; height: 100px;" alt="Brown Wide-Leg Pants" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes12.jpg" style="width: 120px; height: 100px;" alt="Modern Blue Outfit" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes15.jpg" style="width: 120px; height: 100px;" alt="Casual Beige Outfit" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes16.jpg" style="width: 120px; height: 100px;" alt="Elegant Beige Set" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes13.jpg" style="width: 120px; height: 100px;" alt="White Shirt & Pants" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+            <div class="items ">
+                <img src="./image/clothes14.jpg" style="width: 120px; height: 100px;" alt="Minimal Beige Outfit" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+            <div class="items ">
+                <img src="./image/clothes5.jpg" style="width: 120px; height: 100px;" alt="Cloud Blue Outfit" />
+                <p class="p1">name:
+                    <i class="fa-regular fa-eye" onclick="redirectToDetails(this)"></i>
+                </p>
+                <p class="p1">Price: <span>50$</span> <i class="fa-solid fa-cart-plus"  onclick="addToCart(this)"></i>
+                </p>
+                <p class="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </p>
+            </div>
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <div class="section4">
+        <h4 id="whyUs">WHY SHOP WITH US</h4>
+        <div class="cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Fast Delivery</h3>
+                <p>Variations of passages of Lorem Ipsum available</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Free Shipping</h3>
+                <p>Variations of passages of Lorem Ipsum available</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>Best Quality</h3>
+                <p>Variations of passages of Lorem Ipsum available</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="top" class="upArrow"><i class="fa-regular fa-circle-up"></i></button>
+
+    <div id="contactUs" class="section5"></div>
+
+    <section class="contact-section">
+        <h4>CONTACT US</h4>
+        <div class="contact-container">
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.3374430868244!2d2.2944816763435023!3d48.858370071371286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ef4eb1f6d55%3A0x6b4e5255ab66b166!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1712879454133!5m2!1sen!2sfr"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <!-- Contact Form -->
+            <div class="form-container">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                    <textarea name="message" rows="4" placeholder="Message" required></textarea>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <div class="row col-11 footer">
+        <div class="footer-section about">
+            <h2>ABOUT US</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed doLorem ipsum dolor sit amet.
+            </p>
+        </div>
+
+        <div class="footer-section newsletter">
+            <h2>Newsletter</h2>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </div>
+
+        <div class="footer-section need-help">
+            <h2>NEED HELP</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed doLorem ipsum dolor sit amet.
+            </p>
+        </div>
+
+        <div class="footer-section contact-us">
+            <h2>CONTACT US</h2>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> Gb road 123 London UK</li>
+                <li><i class="fas fa-phone"></i> +01 12345678901</li>
+                <li><i class="fas fa-envelope"></i> demo@gmail.com</li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="social-icons ">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <p>&copy; 2024 All Rights Reserved By Free Html Templates</p>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

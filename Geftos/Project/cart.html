@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./cart.css" />
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <header class="col-12">
+
+    <div class="col-1"></div>
+    <div class="navbar col-10" style="margin-left: 8.33%;">
+
+
+      <div class="logo">Giftos</div>
+      <div>
+        <a href="#home" class="active">HOME</a>
+      </div>
+      <div>
+        <a href="#shop">SHOP</a>
+      </div>
+      <div>
+        <a href="#whyUs">WHY US</a>
+      </div>
+      <div>
+        <a href="#contactUs">CONTACT US</a>
+      </div>
+      <div>
+        <a id="signIn" href="./createAccount.html">Sign in</a>
+        <span id="span1"></span>
+
+       
+      </div>
+      <div>
+        <span id="bag"></span><span id="bagIcon"><i class="fa-solid fa-bag-shopping"
+            onclick="directToCards(this)"></i></span>
+      </div>
+      <div>
+        <button id="Dark"><i class="fa-regular fa-sun"></i></button>
+      </div>
+
+    </div>
+
+    <div class="col-1"></div>
+  </header>
+  <h1>Shopping Cart</h1>
+
+  <div id="cartItems"></div>
+
+  <p id="totalAmount">Total Amount: $0</p>
+  <button id="buyNow">Buy Now</button>
+  <div class="row col-11 footer">
+    <div class="footer-section about">
+      <h2>ABOUT US</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed doLorem ipsum dolor sit amet.
+      </p>
+    </div>
+
+    <div class="footer-section newsletter">
+      <h2>Newsletter</h2>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+
+    <div class="footer-section need-help">
+      <h2>NEED HELP</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed doLorem ipsum dolor sit amet.
+      </p>
+    </div>
+
+    <div class="footer-section contact-us">
+      <h2>CONTACT US</h2>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Gb road 123 London UK</li>
+        <li><i class="fas fa-phone"></i> +01 12345678901</li>
+        <li><i class="fas fa-envelope"></i> demo@gmail.com</li>
+      </ul>
+    </div>
+
+
+
+
+    <div class="social-icons ">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div>
+      <p>&copy; 2024 All Rights Reserved By Free Html Templates</p>
+    </div>
+  </div>
+  </div>
+
+
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartItemsDiv = document.getElementById("cartItems");
+    const totalAmount = document.getElementById("totalAmount");
+
+    function updateCartDisplay() {
+      cartItemsDiv.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((product, index) => {
+        // Ensure price is a number
+        const productPrice = parseFloat(product.price);
+
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("cart-item");
+
+        productDiv.innerHTML = `
+      <div>
+        <img src=${product.imageSrc} alt="" style='width:50px' class="cart-img">
+        <p><strong>${product.name}</strong></p>
+        <p>Price: $${productPrice.toFixed(2)}</p>
+      </div>
+      <div class="quantity-control">
+        <button class="control-btn" onclick="updateQuantity(${index}, -1)">-</button>
+        <span>${product.quantity}</span>
+        <button class="control-btn" onclick="updateQuantity(${index}, 1)">+</button>
+      </div>
+      <p>Total: $${(productPrice * product.quantity).toFixed(2)}</p>
+      <button class="remove" onclick="removeFromCart('${product.name}')">Remove</button>
+    `;
+
+        cartItemsDiv.appendChild(productDiv);
+
+        // Accumulate total
+        total += productPrice * product.quantity;
+      });
+
+      // Update total amount in DOM
+      totalAmount.textContent = `Total Amount: $${total.toFixed(2)}`;
+    }
+
+    function updateQuantity(index, change) {
+      cart[index].quantity += change;
+
+      // Ensure quantity doesn't go below 1
+      if (cart[index].quantity < 1) {
+        cart[index].quantity = 1;
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartDisplay();
+    }
+
+    function removeFromCart(productName) {
+      cart = cart.filter(product => product.name !== productName);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartDisplay();
+    }
+
+    document.getElementById("buyNow").addEventListener("click", function () {
+      if (cart.length > 0) {
+        alert("Thank you for your purchase!");
+        localStorage.removeItem("cart");
+        cart = [];
+        window.location.href = "shipped.html";
+        // updateCartDisplay();
+      } else {
+        alert("Your cart is empty!");
+      }
+    });
+
+    // Initialize the cart display on page load
+    updateCartDisplay();
+
+
+  </script>
+</body>
+
+</html>
